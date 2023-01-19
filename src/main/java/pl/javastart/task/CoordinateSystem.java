@@ -17,13 +17,13 @@ public class CoordinateSystem {
         if (point.getX() != 0 && point.getY() != 0) {
             showQuarterInfo(point);
         } else if (point.getX() == 0 && point.getY() == 0) {
-            System.out.println(showPointInfo(point) + " na środku układu współrzędnych");
+            System.out.println(getPointInfo(point) + " na środku układu współrzędnych");
         } else {
             showAxisInfo(point);
         }
     }
 
-    private String showPointInfo(Point point) {
+    private String getPointInfo(Point point) {
         return ("Punkt (" + point.getX() + ", " + point.getY() + ") leży");
     }
 
@@ -40,15 +40,15 @@ public class CoordinateSystem {
     }
 
     private void showQuarterInfo(Point point) {
-        System.out.println(showPointInfo(point) + " w " + getQuarter(point) +
+        System.out.println(getPointInfo(point) + " w " + getQuarter(point) +
                 " ćwiartce układu współrzędnych");
     }
 
     private void showAxisInfo(Point point) {
         if (point.getX() == 0 && point.getY() != 0) {
-            System.out.println(showPointInfo(point) + " na osi Y");
+            System.out.println(getPointInfo(point) + " na osi Y");
         } else if (point.getY() == 0 && point.getX() != 0) {
-            System.out.println(showPointInfo(point) + " na osi X");
+            System.out.println(getPointInfo(point) + " na osi X");
         }
     }
 }
